@@ -20,15 +20,18 @@
 import java.util.Arrays;
 
 class RunningSumof1dArray {
+    //  дан масив целых чисел , нужно создать новый массив ,онсовываясь на первоначальный ,
+    //  так что бы последующий элемент складывался со своим предшественником.
     static class Solution {
         public int[] runningSum(int[] nums) {
             for (int i = 1 ; i < nums.length; i++){
                 nums[i] += nums[i-1];
+             
             }
             return nums;
         }
     }
-
+// здесь мы вызываем наш написанный метод
     public static void main(String[] args) {
         Solution solution = new Solution();
         int[] nums = {1, 2, 3, 4};
